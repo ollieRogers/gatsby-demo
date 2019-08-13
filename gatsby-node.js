@@ -2,7 +2,7 @@ const path = require(`path`)
 const slash = require(`slash`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  // we use the provided allContentfulBlogPost query to fetch the data from Contentful
+  // we use the provided allContentfulPage query to fetch data from Contentful
   return graphql(
     `
       {
@@ -30,7 +30,6 @@ exports.createPages = ({ graphql, actions }) => {
           path: `/${edge.node.slug}`,
           component: slash(pageTemplate),
           context: {
-            slug: edge.node.slug,
             id: edge.node.id,
           },
         })
