@@ -3,7 +3,7 @@ import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import { makeStyles } from "@material-ui/core/styles"
 import { Button } from "@material-ui/core"
-import { useStaticQuery, navigate } from "gatsby"
+import { useStaticQuery, navigate, graphql  } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
   grow: {
